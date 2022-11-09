@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Quiz.FinalPage">
+    <ContentPage.Content>
+        <StackLayout >
+            <Label x:Name="Nickname" Text="Поздравляем "
+                VerticalOptions="Start" 
+                HorizontalOptions="Center" 
+                   Margin="0,250,0,100" FontSize="25" HorizontalTextAlignment="Center" TextColor="Brown"
+                   FontAttributes="Bold" />
+            <Label x:Name="Points" Text="Вы набрали: "
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   TextColor="Chocolate" FontSize="18"  Margin="0,-70,0,0"/>
+
+            <Button Text="Выйти" Margin="100" Clicked="Button_Clicked" Background="Brown" TextColor="beige"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

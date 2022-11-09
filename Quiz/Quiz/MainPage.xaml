@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Quiz.MainPage">
+
+    <StackLayout BackgroundColor="White">
+        <Grid Margin="25">
+
+            <Label Text="QuizFlags" 
+                   FontSize="30" Grid.Row="0" 
+                   HorizontalTextAlignment="Center" 
+                   Margin="0,50,0,0"
+                   TextColor="Brown"
+                   FontAttributes="Bold"
+                   />
+
+
+            <Label Text="Введите имя:" 
+                   FontSize="20" Grid.Row="1" 
+                   HorizontalTextAlignment="Center" 
+                   Margin="0,50,0,0"
+                   TextColor="Chocolate"
+                   />
+            <Editor x:Name="edtr_nickname"
+                Grid.Row="1"
+                    Margin="0,100,0,0"
+                    TextChanged="edtr_nickname_TextChanged"
+                    IsTabStop="True"
+                    PlaceholderColor="Brown"
+                    />
+
+            <Grid Grid.Row="2" Margin="0,50,0,0">
+                <Label Text="Выберите сложность" 
+                   FontSize="20"
+                   Grid.ColumnSpan="3"
+                   HorizontalTextAlignment="Center"
+                   TextColor="Brown"
+                   />
+
+                <RadioButton Grid.Column="0" Grid.Row="1" Content="Легкая" CheckedChanged="rbtn_difficultyLevel_CheckedChanged" IsChecked="True" TextColor="Chocolate" ></RadioButton>
+                <RadioButton Grid.Column="1" Grid.Row="1"  Content="Средняя" CheckedChanged="rbtn_difficultyLevel_CheckedChanged" TextColor="Chocolate" ></RadioButton>
+                <RadioButton Grid.Column="2" Grid.Row="1"  Content="Сложная" CheckedChanged="rbtn_difficultyLevel_CheckedChanged"  TextColor="Chocolate" ></RadioButton>
+            </Grid>
+
+            <Button x:Name="btn_start" Grid.Row="3" Margin="50" Text="Начать" Clicked="btn_start_Clicked" Background="Chocolate" TextColor="Beige"></Button>
+        </Grid>
+    </StackLayout>
+</ContentPage>
